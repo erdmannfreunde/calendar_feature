@@ -29,15 +29,15 @@
    {
      $t = static::$strTable;
      $intStart = intval($intStart);
-     $intEnd = intval($intEnd);    
+     $intEnd = intval($intEnd);
 
      switch ($settingFeatured) {
        case 'featured_events':
-         $SQLfeatured = ' AND '.$t.'.featured=1';
+         $SQLfeatured = ' AND '.$t.'.featured="1"';
          break;
 
        case 'unfeatured_events':
-         $SQLfeatured = ' AND '.$t.'.featured!=1';
+         $SQLfeatured = ' AND '.$t.'.featured!="1"';
          break;
 
        case 'all_events':

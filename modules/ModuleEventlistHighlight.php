@@ -95,8 +95,6 @@ class ModuleEventlistHighlight extends \ModuleEventlist
 		$arrAllEvents = EventsHighlight::getAllEvents($this->cal_calendar, $strBegin, $strEnd, $settingFeatured);
 		$sort = ($this->cal_order == 'descending') ? 'krsort' : 'ksort';
 
-    // print_r($arrAllEvents);
-
 		// Sort the days
 		$sort($arrAllEvents);
 
