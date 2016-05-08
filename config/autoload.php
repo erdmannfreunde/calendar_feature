@@ -15,11 +15,11 @@
 ClassLoader::addClasses(array
 (
 	// Classes
-	'Contao\EventsHighlight'          => 'system/modules/calendar_hightlight/classes/EventsHighlight.php',
+	'Contao\EventsHighlight'          => 'system/modules/calendar_highlight/classes/EventsHighlight.php',
 
 	// Models
-	'CalendarEventsModelHighlight'    => 'system/modules/calendar_hightlight/models/CalendarEventsModelHighlight.php',
+	'CalendarEventsModelHighlight'    => 'system/modules/calendar_highlight/models/CalendarEventsModelHighlight.php',
 
 	// Modules
-	'Contao\ModuleEventlistHighlight' => 'system/modules/calendar_hightlight/modules/ModuleEventlistHighlight.php',
+	'Contao\ModuleEventlistHighlight' => 'system/modules/calendar_highlight/modules/ModuleEventlistHighlight.php',
 ));
