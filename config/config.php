@@ -22,6 +22,7 @@
  * FRONT END MODULES
  */
 
+ // Überschreiben des Standard-Moduls für eventlist
  $GLOBALS['FE_MOD']['events']['eventlist'] = 'ModuleEventlistHighlight';
 
 

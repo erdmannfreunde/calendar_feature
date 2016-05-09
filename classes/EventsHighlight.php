@@ -15,14 +15,14 @@ namespace Contao;
 
 
 /**
- * Provide methods to get all events of a certain period from the database.
- *
- * @author Leo Feyer <https://github.com/leofeyer>
+ * erweitert system/modules/calendar/classes/events.php
  */
 abstract class EventsHighlight extends \Events
 {
 
   /**
+   * Kopie von getAllEvents() in system/modules/calendar/classes/events.php
+   *
 	 * Get all events of a certain period
 	 *
 	 * @param array   $arrCalendars
@@ -31,6 +31,10 @@ abstract class EventsHighlight extends \Events
 	 *
 	 * @return array
 	 */
+
+  // Original:
+  // protected function getAllEvents($arrCalendars, $intStart, $intEnd)
+  // --- Zusätzliche Übergabe des Featured-Settings des Moduls - $settingFeatured
 	protected function getAllEvents($arrCalendars, $intStart, $intEnd, $settingFeatured)
 	{
 		if (!is_array($arrCalendars))
@@ -53,7 +57,11 @@ abstract class EventsHighlight extends \Events
 			}
 
 			// Get the events of the current period
-			$objEvents = \CalendarEventsModelHighlight::findCurrentByPid($id, $intStart, $intEnd, $arrOptions=array(), $settingFeatured);
+      // Original:
+      // $objEvents = \CalendarEventsModel::findCurrentByPid($id, $intStart, $intEnd);
+      // --- Aufruf anderes Models \CalendarEventsModelHighlight und Übergabe des Featured-Settings des Moduls - $settingFeatured
+		  $objEvents = \CalendarEventsModelHighlight::findCurrentByPid($id, $intStart, $intEnd, $arrOptions=array(), $settingFeatured);
+
 
 			if ($objEvents === null)
 			{

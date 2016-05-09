@@ -14,10 +14,16 @@
 
 namespace Contao;
 
+/**
+ * erweitert system/modules/calendar/modules/ModuleEventlist.php
+ */
 class ModuleEventlistHighlight extends \ModuleEventlist
 {
 
   /**
+   *
+   * Kopie von compile() in system/modules/calendar/modules/ModuleEventlist.php
+   *
 	 * Generate the module
 	 */
 	protected function compile()
@@ -25,6 +31,7 @@ class ModuleEventlistHighlight extends \ModuleEventlist
     /** @var \PageModel $objPage */
 		global $objPage;
 
+    // zusätzliches Auslesen des Wertes in den Moduleinstellungen bzgl. der Featured-Events - $settingFeatured
     $settingFeatured = $this->events_featured;
 
 		$blnClearInput = false;
@@ -91,7 +98,10 @@ class ModuleEventlistHighlight extends \ModuleEventlist
 
 		list($strBegin, $strEnd, $strEmpty) = $this->getDatesFromFormat($this->Date, $this->cal_format);
 
-		// Get all events
+    // Get all events
+    // Original:
+    // $arrAllEvents = $this->getAllEvents($this->cal_calendar, $strBegin, $strEnd);
+    // --- Aufruf anderer Funktion EventsHighlight::getAllEvents() und Übergabe des Featured-Settings des Moduls - $settingFeatured
 		$arrAllEvents = EventsHighlight::getAllEvents($this->cal_calendar, $strBegin, $strEnd, $settingFeatured);
 		$sort = ($this->cal_order == 'descending') ? 'krsort' : 'ksort';
 
