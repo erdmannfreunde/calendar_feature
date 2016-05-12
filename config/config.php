@@ -12,75 +12,9 @@
  */
 
 
-/**
- * BACK END MODULES
- *
- */
-
-
-/**
- * FRONT END MODULES
- */
-
- // Überschreiben des Standard-Moduls für eventlist
- $GLOBALS['FE_MOD']['events']['eventlist'] = 'ModuleEventlistHighlight';
-
-
-
-/**
- * CONTENT ELEMENTS
- *
- */
-
-
-/**
- * BACK END FORM FIELDS
- *
- */
-
-
-/**
- * FRONT END FORM FIELDS
- *
- */
-
-
-/**
- * PAGE TYPES
- *
- */
-
-
-/**
- * MODEL MAPPINGS
- *
- */
-
-
-/**
- * MAINTENANCE MODULES
- *
- */
-
-
-/**
- * PURGE JOBS
- *
- */
-
-
-/**
- * CRON JOBS
- *
- */
-
 
 /**
  * HOOKS
  *
  */
-
-
-/**
- * AUTO ITEMS
- */
+ $GLOBALS['TL_HOOKS']['getAllEvents'][] = array('EventsHighlight', 'getFeaturedEvents');
