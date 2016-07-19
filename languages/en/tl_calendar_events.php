@@ -12,4 +12,5 @@
  */
 
 
- $GLOBALS['TL_LANG']['tl_calendar_events']['featured'] = array('Feature item','Show the event item in a featured event list.');
+ $GLOBALS['TL_LANG']['tl_calendar_events']['featured'] = array('Feature event','Show the event item in a featured event list.');
+ $GLOBALS['TL_LANG']['tl_calendar_events']['feature'] = array('Feature/unfeature event','Feature/unfeature event ID %s.');
