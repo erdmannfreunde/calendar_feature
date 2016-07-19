@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2005-2016 Leo Feyer
  *
- * @package   CalendarHighlight
+ * @package   CalendarFeature
  * @author    Sebastian Buck
  * @license   LGPL
  * @copyright Erdmann & Freunde
@@ -20,8 +20,8 @@ array_insert(
   'feature' => array (
     'label'               => &$GLOBALS['TL_LANG']['tl_calendar_events']['feature'],
     'icon'                => 'featured.gif',
-    'attributes'          => 'onclick="Backend.getScrollOffset();return AjaxRequest.tl_calendar_highlight.toggleFeatured(this,%s)"',
-    'button_callback'     => array('tl_calendar_highlight', 'iconFeatured')
+    'attributes'          => 'onclick="Backend.getScrollOffset();return AjaxRequest.tl_calendar_feature.toggleFeatured(this,%s)"',
+    'button_callback'     => array('tl_calendar_feature', 'iconFeatured')
   )
 ));
 
@@ -49,7 +49,7 @@ array_insert(
  /**
   * Funktionen, zum featuren/unfeaturen von Terminen; Basierend auf tl_news
   */
- class tl_calendar_highlight extends tl_calendar_events
+ class tl_calendar_feature extends tl_calendar_events
  {
    /**
  	 * Return the "feature/unfeature element" button

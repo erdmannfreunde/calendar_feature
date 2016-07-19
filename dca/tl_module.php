@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2005-2016 Leo Feyer
  *
- * @package   CalendarHighlight
+ * @package   CalendarFeature
  * @author    Sebastian Buck
  * @license   LGPL
  * @copyright Erdmann & Freunde

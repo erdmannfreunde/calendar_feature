@@ -1,9 +1,9 @@
 {
-  "name": "erdmannfreunde/calendar_highlight",
-  "description": "Contao Extension to highlight event items like in news module",
-  "keywords": ["contao", "calendar", "calendar_highlight", "calendar highlight"],
+  "name": "erdmannfreunde/calendar_feature",
+  "description": "Contao Extension to feature event items like in news module",
+  "keywords": ["contao", "calendar", "calendar_feature", "calendar feature"],
   "type": "contao-module",
-  "homepage": "https://github.com/ErdmannFreunde/calendar_highlight",
+  "homepage": "https://github.com/ErdmannFreunde/calendar_feature",
   "license": "GPL-3.0+",
 	"authors":[
 		{
@@ -14,8 +14,8 @@
 	],
 	"support":{
   	"email": "moin@erdmann-freunde.de",
-		"issues":"https://github.com/ErdmannFreunde/calendar_highlight/issues",
-		"source":"https://github.com/ErdmannFreunde/calendar_highlight"
+		"issues":"https://github.com/ErdmannFreunde/calendar_feature/issues",
+		"source":"https://github.com/ErdmannFreunde/calendar_feature"
 	},
 	"require": {
     "php": ">=5.3",
@@ -23,12 +23,12 @@
     "contao-community-alliance/composer-plugin":"^2.3.0 || 3.*"
   },
   "replace": {
-    "contao-legacy/calendar_highlight": "self.version"
+    "contao-legacy/calendar_feature": "self.version"
   },
 	"extra": {
     "contao": {
       "sources": {
-        "": "system/modules/calendar_highlight"
+        "": "system/modules/calendar_feature"
       }
     }
   }
