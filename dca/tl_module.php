@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2005-2016 Leo Feyer
  *
- * @package   CalendarHighlight
+ * @package   CalendarFeature
  * @author    Sebastian Buck
  * @license   LGPL
  * @copyright Erdmann & Freunde
@@ -14,8 +14,8 @@
 
  // Anpassung der Palette
  $GLOBALS['TL_DCA']['tl_module']['palettes']['eventlist'] = str_replace(
-     'perPage;',
-     'perPage,events_featured;',
+     'perPage',
+     'perPage,events_featured',
      $GLOBALS['TL_DCA']['tl_module']['palettes']['eventlist']
  );
 

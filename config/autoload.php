@@ -15,5 +15,5 @@
 ClassLoader::addClasses(array
 (
 	// Classes
-	'EventsHighlight' => 'system/modules/calendar_highlight/classes/EventsHighlight.php',
+	'EventsFeature' => 'system/modules/calendar_feature/classes/EventsFeature.php',
 ));
