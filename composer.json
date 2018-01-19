@@ -4,7 +4,7 @@
   "keywords": ["contao", "calendar", "calendar_feature", "calendar feature"],
   "type": "contao-module",
   "homepage": "https://github.com/ErdmannFreunde/calendar_feature",
-  "license": "GPL-3.0+",
+  "license": "GPL-3.0-or-later",
 	"authors":[
 		{
 			"name":"Erdmann & Freunde // Sebastian Buck",
