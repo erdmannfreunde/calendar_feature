@@ -14,8 +14,8 @@
 
  // Anpassung der Palette
  $GLOBALS['TL_DCA']['tl_module']['palettes']['eventlist'] = str_replace(
-     'perPage;',
-     'perPage,events_featured;',
+     'perPage',
+     'perPage,events_featured',
      $GLOBALS['TL_DCA']['tl_module']['palettes']['eventlist']
  );
 
