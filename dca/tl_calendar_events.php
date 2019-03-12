@@ -101,7 +101,7 @@ array_insert(
 	{
 		// Check permissions to edit
 		Input::setGet('id', $intId);
-		Input::setGet('act', 'feature');
+		Input::setGet('act', 'edit');
 		$this->checkPermission();
 
 		// Check permissions to feature
