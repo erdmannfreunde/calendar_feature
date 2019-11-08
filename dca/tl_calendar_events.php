@@ -18,10 +18,22 @@ array_insert(
   6,
   array (
   'feature' => array (
-    'label'               => &$GLOBALS['TL_LANG']['tl_calendar_events']['feature'],
-    'icon'                => 'featured.gif',
-    'attributes'          => 'onclick="Backend.getScrollOffset();return AjaxRequest.tl_calendar_feature.toggleFeatured(this,%s)"',
-    'button_callback'     => array('tl_calendar_feature', 'iconFeatured')
+    'label'                => &$GLOBALS['TL_LANG']['tl_calendar_events']['feature'],
+    'icon'                 => 'featured.gif',
+    'attributes'           => 'onclick="Backend.getScrollOffset();"',
+    'haste_ajax_operation' => [
+        'field' => 'featured',
+        'options' => [
+            [
+                'value' => '',
+                'icon' => 'featured_.svg',
+            ],
+            [
+                'value' => '1',
+                'icon' => 'featured.svg',
+            ],
+        ],
+    ],
   )
 ));
 
@@ -51,42 +63,6 @@ array_insert(
   */
  class tl_calendar_feature extends tl_calendar_events
  {
-   /**
- 	 * Return the "feature/unfeature element" button
- 	 *
- 	 * @param array  $row
- 	 * @param string $href
- 	 * @param string $label
- 	 * @param string $title
- 	 * @param string $icon
- 	 * @param string $attributes
- 	 *
- 	 * @return string
- 	 */
- 	public function iconFeatured($row, $href, $label, $title, $icon, $attributes)
- 	{
-
- 		if (strlen(Input::get('fid')))
- 		{
- 			$this->toggleFeatured(Input::get('fid'), (Input::get('state') == 1), (@func_get_arg(12) ?: null));
- 			$this->redirect($this->getReferer());
- 		}
-
- 		// Check permissions AFTER checking the fid, so hacking attempts are logged
- 		if (!$this->User->hasAccess('tl_calendar_events::featured', 'alexf'))
- 		{
- 			return '';
- 		}
-
- 		$href .= '&amp;fid='.$row['id'].'&amp;state='.($row['featured'] ? '' : 1);
-
- 		if (!$row['featured'])
- 		{
- 			$icon = 'featured_.gif';
- 		}
-
- 		return '<a href="'.$this->addToUrl($href).'" title="'.specialchars($title).'"'.$attributes.'>'.Image::getHtml($icon, $label, 'data-state="' . ($row['featured'] ? 1 : 0) . '"').'</a> ';
- 	}
 
   /**
 	 * Feature/unfeature a news item
