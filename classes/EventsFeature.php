@@ -26,14 +26,14 @@
  				{
           switch ($objModule->events_featured) {
             case 'featured_events':
-              if ($event[featured] != 1) {
+              if ($event['featured'] != 1) {
                 // nicht gefeatured Events löschen
                 unset($arrEvents[$key][$day][$arrCol]);
               }
               break;
 
             case 'unfeatured_events':
-              if ($event[featured] == 1) {
+              if ($event['featured'] == 1) {
                 // gefeatured Events löschen
                 unset($arrEvents[$key][$day][$arrCol]);
               }
